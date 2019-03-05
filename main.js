@@ -4,35 +4,28 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML += textToPrint;
 };
 
-const drinks = document.getElementById("drinks");
-let action;
-
 let num = prompt("How old are you?");
 let Num = parseInt(num);
 
 const iAmThirsty = (num) => {
     
     if (num < 21){
-
-       action = "Drink some water"; 
-       //drinks.innerHTML += action;
-       return action;
+       return "Drink some water";  
     }
     else if (num > 20 && num < 65){
-
-        action = "have a beer";
-       // drinks.innerHTML += action;
-        return action;
+        return "have a beer";
     }
-
     else {
-        action = "take a nap";
-       // drinks.innerHTML += action;
-        return action;
+        return "take a nap";
     }
 };
 
-//iAmThirsty(num);
-
 printToDom("drinks", iAmThirsty(num));
 
+console.log(1 === '1'); //false
+//console.log(1 == '1'); //true 
+console.log(1 !== '2'); //true
+
+console.log('cats'.length); // how many chars
+const quote = 'winter is coming';
+console.log(quote.indexOf('is'));
